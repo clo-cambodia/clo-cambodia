@@ -1,0 +1,357 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import leadershipBanner from "/public/assets/banner/leadership_banner.jpg";
+import boardOrd1 from "/public/assets/team/board_ord_1.png";
+import boardOrd2 from "/public/assets/team/board_ord_2.png";
+import boardOrd3 from "/public/assets/team/board_ord_3.png";
+import boardOrd4 from "/public/assets/team/board_ord_4.png";
+import execOrd1 from "/public/assets/team/exec_ord_1.png";
+import execOrd2 from "/public/assets/team/exec_ord_2.png";
+import execOrd3 from "/public/assets/team/exec_ord_3.png";
+import membOrd1 from "/public/assets/team/member_ord_1.png";
+import membOrd2 from "/public/assets/team/member_ord_2.jpg";
+import membOrd3 from "/public/assets/team/member_ord_3.png";
+---
+<Layout>
+<section class="header">
+  <div class="header-grid">
+    <div class="header-text">
+        <h1>LEADERSHIP</h1>
+    </div>
+    <div class="header-image">
+      <Image 
+          src={leadershipBanner}
+          alt="Leadership Banner"
+          loading="lazy"
+        />
+    </div>
+  </div>
+</section>
+<section class="content-section container-wrap">
+  <!-- Board of Directors -->
+  <div class="content-item">
+    <h1 class="line-title">Board of Directors</h1>
+
+    <div class="team-grid four">
+      <div class="member">
+        <Image 
+          src={boardOrd1}
+          alt="Board 1"
+          loading="lazy"
+          width={250}
+        />
+        <div class="member-name">
+          <h3>Rev. Pisit Heng</h3>
+          <p>Chair President</p>
+        </div>
+      </div>
+      <div class="member">
+        <Image 
+          src={boardOrd2}
+          alt="Board 2"
+          loading="lazy"
+          width={250}
+        />
+        <div class="member-name">
+          <h3>Todd Bequette</h3>
+          <p>Vice President</p>
+        </div>
+      </div>
+      <div class="member">
+        <Image 
+          src={boardOrd3}
+          alt="Board 3"
+          loading="lazy"
+          width={250}
+        />
+        <div class="member-name">
+          <h3>Yek Pich</h3>
+          <p>Board Member</p>
+        </div>
+      </div>
+      <div class="member">
+        <Image 
+          src={boardOrd4}
+          alt="Board 4"
+          loading="lazy"
+          width={250}
+        />
+        <div class="member-name">
+          <h3>Chek Im</h3>
+          <p>Board Member</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Executive Team -->
+  <div class="content-item">
+    <h1 class="line-title">Executive Team</h1>
+    <div class="team-grid four">
+      <div class="member">
+         <Image 
+          src={execOrd1}
+          alt="Executive 1"
+          loading="lazy"
+          width={250}
+        />
+        <div class="member-name">
+          <h3>Makara Sok</h3>
+          <p>Executive Director</p>
+        </div>
+      </div>
+
+      <div class="member">
+        <Image 
+          src={execOrd2}
+          alt="Executive 2"
+          loading="lazy"
+          width={250}
+        />
+        <div class="member-name">
+          <h3>Kesa Sorn</h3>
+          <p>Finance Manager</p>
+        </div>
+      </div>
+
+      <div class="member">
+        <Image 
+          src={execOrd3}
+          alt="Executive 3"
+          loading="lazy"
+          width={250}
+        />
+        <div class="member-name">
+          <h3>Vannet Loem</h3>
+          <p>Administrator</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Staff -->
+  <div class="content-item last-content-item">
+    <h1 class="line-title">Staff</h1>
+    <div class="team-grid four">
+      <div class="member">
+        <Image 
+          src={membOrd1}
+          alt="Member Order 1"
+          loading="lazy"
+          width={250}
+        />
+        <div class="member-name">
+          <h3>MengHeng Hav</h3>
+          <p>Technical Support Engineer</p>
+        </div>
+      </div>
+      <div class="member">
+      <Image 
+          src={membOrd2}
+          alt="Member Order 2"
+          loading="lazy"
+          width={250}
+        />
+        <div class="member-name">
+          <h3>Noelle</h3>
+          <p>Translator</p>
+        </div>
+      </div>
+      <div class="member">
+        <Image 
+          src={membOrd3}
+          alt="Member Order 3"
+          loading="lazy"
+          width={250}
+        />
+        <div class="member-name">
+          <h3>Hanyou Pham</h3>
+          <p>Community Facilitator</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+/* ===== HEADER ===== */
+.header {
+  width: 100vw;
+  height: 30vh;
+  background-color: var(--blue-signature-color);
+  user-select: none;
+}
+
+.header-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100%;
+  align-items: center;
+}
+
+.header-text {
+  width: min(1400px, 80%);
+  margin-left: auto;
+  color: white;
+  text-align: left;
+}
+
+.header-text h1 {
+  font-size: 40px;
+  font-weight: 500;
+}
+
+/* ===== Banner Image Safety ===== */
+.header-image {
+  height: 100%;
+  overflow: hidden;
+  mask-image: linear-gradient(to left, black 0%, black 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to left, black 0%, black 90%, transparent 100%);
+}
+
+.header-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ===== CONTENT ===== */
+.content-item {
+  padding-top: 50px;
+}
+
+.line-title {
+  position: relative;
+  padding-left: 14px;
+  margin-bottom: 40px;
+  font-weight: 500;
+}
+
+.line-title::before {
+  content: "";
+  width: 4px;
+  height: 100%;
+  background: var(--blue-signature-color);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* ===== TEAM GRID ===== */
+.team-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.team-grid.four {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.member img {
+  object-fit: cover;
+  object-position: center;
+  aspect-ratio: 1 / 1;
+  user-select: none;
+}
+
+.member h3 {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.member p {
+  font-size: 16px;
+  color: #555;
+}
+
+.last-content-item {
+    margin-bottom: 80px;
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1280px) { 
+  .header {
+    height: 50%;
+  }
+
+  .header-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 2fr;
+  }
+
+  .header-text {
+    text-align: center;
+    width: 100%;
+  }
+
+  .header-text h1 {
+    font-size: 32px;
+  }
+
+  .header-image {
+    height: 50vh;
+    inset: 0;
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+
+  .header-image img { 
+    height: 100%;
+    object-position: center;
+  }
+
+  .team-grid.three,
+  .team-grid.four {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+.header {
+  height: fit-content;
+}
+
+.header-grid {
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.5fr 2fr;
+}
+
+.header-image {
+  height: 50vh;
+  inset: 0;
+  mask-image: none;
+  -webkit-mask-image: none;
+}
+
+.header-text {
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+}
+
+.team-grid.three,
+.team-grid.four {
+  grid-template-columns: 1fr;
+}
+
+.team-grid .member {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+}
+
+@media (max-width: 1280px) {
+  .member {
+    gap: 20px;
+  }
+
+  .member img {
+    width: 100%;
+  }
+}
+</style>
+
+</Layout>

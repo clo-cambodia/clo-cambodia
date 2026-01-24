@@ -1,0 +1,537 @@
+---
+import Layout from "../layouts/Layout.astro";
+import style from "../assets/style.css";
+---
+<Layout>
+<section class="header">
+  <div class="header-grid">
+    <div class="header-text">
+      <h1>CURRENT PROJECTS</h1>
+    </div>
+    <div class="header-image">
+      <img
+        src=`${import.meta.env.BASE_URL}/assets/banner/project_banner.jpg`
+        alt="Current Projects Banner"
+      />
+    </div>
+  </div>
+</section>
+<!-- ===== CONTENT ===== -->
+<section class="content-section container-wrap">
+  <p class="intro">
+    Our work spans a diverse range of language-technology and community-development initiatives, each driven by the shared goal of empowering users through accessible tools, sustainable literacy solutions, and culturally grounded resources. Across all three projects, we strive to bridge technological innovation with real-world linguistic needs—supporting individuals, communities, and organizations in preserving their languages while embracing modern digital environments.
+  </p>
+  <!-- Keyman -->
+  <div class="content-item">
+    <h1 class="line-title">Keyman</h1>
+    <div class="keyman-column" id="Keyman">
+      <div>
+        <p>
+          Provide comprehensive technical support for Keyman’s users, conduct rigorous testing of bug fixes and feature updates, and contribute to the growth of Keyman’s online presence through social media, blog engagement, and Keyman’s keyboard & lexical model repository.
+This work extends to quality assurance for the KeymanWeb.com redevelopment, Keyman Browser, and Busra font project. From this effort, two important tools emerged:</p>
+    <ul>
+      <li>Khmer Text Normalization: a system that transforms Khmer text into a standardized, properly encoded form, repairing inconsistencies such as incorrect vowel combinations.</li>
+      <li>Khmer Encoding Structure (KES): designed around a well-defined regex of Khmer orthographic syllable structures to reinforce the principle of “one visual form, one encoding.”</li>
+    </ul>
+    <p>
+      Together, these tools help modernize Khmer text processing while giving developers a reliable foundation for clean, accurate script rendering.
+    </p>
+      </div>
+      <div class="keyman-icons">
+        <img src="../assets/logo/keyman.png" alt="">
+        <img src="../assets/logo/khmer_encoding.png" alt="">
+      </div>
+    </div>
+  <!-- Khmer Text Normalization -->
+  <div class="content-item">
+    <div class="two-column" id="khmer-text-tools">
+      <div>
+        <h2 class="line-title-h2">Khmer Text Normalization Demo</h2>
+        <p>
+          Specifically designed to process and transform Khmer text into a standardized and well-structured format, its main purpose is to ensure that the text is encoded correctly, eliminating inconsistencies or invalid character sequences that may affect readability or digital processing. By using this tool, users can maintain accuracy, consistency, and proper representation of Khmer script across different platforms and applications.
+        </p>
+        <a class="khmer-text-link" href="https://normalize.xn--j2e7beiw1lb2hqg.com/">Try it now →</a>
+      </div>
+      <div>
+        <h2 class="line-title-h2">Khmer Encoding Structure (KES)</h2>
+        <p>
+          Using a well-defined regex for syllable structure, the principle of “one visual form, one encoding” is applied. Fonts should reveal invalid character sequences to help users correct them, or keyboards should smartly convert them into valid forms. Developers can also use a normalizer to standardize Modern Khmer text, fixing spelling errors like redundant vowels and ensuring consistent, valid output.
+        </p>
+        <a class="khmer-text-link" href="https://xn--j2e7beiw1lb2hqg.com/">Try it now →</a>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- Cham Dictionary -->
+  <div class="content-item">
+    <h1 class="line-title">Cham Multilingual Dictionary</h1>
+    <p>The development of a Cham multilingual dictionary, created for Cham individuals studying or working abroad as well as expatriates learning the Cham language. Recognizing the diversity within Cham communities, the dictionary includes entries in Khmer, English, and Korean and supports both traditional Cham script and the Arabic-based script used by other Cham groups. This dual-script approach ensures that the resource serves the full spectrum of Cham speakers, preserving linguistic heritage while remaining accessible to new learners and researchers.</p>
+    <div class="cham-column">
+      <div class="cham-img">
+        <img src=`${import.meta.env.BASE_URL}/assets/project_page/cham_img_1.png` alt="">
+      </div>
+      <div class="cham-img">
+        <img src=`${import.meta.env.BASE_URL}/assets/project_page/cham_img_2.png` alt="">
+      </div>
+    </div>
+  </div>
+  <!-- Kachok Literacy -->
+  <div class="content-item">
+    <h1 class="line-title">Kachok Literacy and Language Development</h1>
+    <p>
+      The Kachok Literacy and Language Development Pilot Project, focuses on capacity building and community-led literacy development. In 2025, a community facilitator completed a three-day Bloom Workshop, while the project manager and assistant underwent a four-week Multilingual Education course at Payap University. These trainings laid the foundation for collaborative progress with the Kachok community. Three teachers have been nominated from within the community, and local members chose to create written texts without outside authorship—resulting in four original songs from Phum Kachut Leu. Efforts are ongoing to finalize the Kachok orthography, anticipated for approval by the end of 2025 through collaboration among CLO, ICC, SIL, INL, and MoEYS. Teacher trainings took place in July 2025, with continuous support offered throughout the year. Meanwhile, the back-transition (transfer literacy) curriculum was drafted in Bloom and is undergoing ongoing adaptation to meet community needs.
+    </p>
+    <div class="image-grid">
+      <div class="kachok">
+        <img src=`${import.meta.env.BASE_URL}assets/project_page/klld_img_1.png` alt="">
+        <span>Awareness raising on the important of literacy with the Kachok community.</span>
+      </div>
+      <div class="kachok">
+         <img src=`${import.meta.env.BASE_URL}assets/project_page/klld_img_2.jpg` alt="">
+        <span>Computer Literacy for the Kachok volunteer teachers-This helps them use Bloom materials in their teaching.</span>
+      </div>
+      <div class="kachok">
+         <img src=`${import.meta.env.BASE_URL}assets/project_page/klld_img_3.jpg` alt="">
+        <span>Bloom workshop with Kachok community facilitator and others from BSC, ICC, minority language groups and other organizations.</span>
+      </div>
+      <div class="kachok">
+         <img src=`${import.meta.env.BASE_URL}assets/project_page/klld_img_4.jpg` alt="">
+        <span>Kachok literacy class commenced last month. Primers and games are developed using Bloom.</span>
+      </div>
+    </div>
+
+    <p>
+      Across all three initiatives, a single thread ties the story together: the belief that language—whether preserved in a script, encoded in a keyboard, or sung in a community song—is a living, evolving technology of its own. Our projects aim to honor that truth by building tools and systems that are both technically rigorous and culturally grounded. As we continue this work, we remain committed to supporting language communities in ways that respect their identity, strengthen their literacy, and expand their voice in the digital world.
+    </p>
+  </div>
+</section>
+<style>
+.header {
+  width: 100vw;
+  height: 30vh;
+  background-color: var(--blue-signature-color);
+  user-select: none;
+}
+
+.header-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100%;
+  align-items: center;
+}
+
+.header-text {
+  color: white;
+  text-align: left;
+  width: min(1400px, 80%);
+  margin-left: auto;
+}
+
+.header-text h1 {
+  font-size: 40px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+/* Banner image safety */
+.header-image {
+  height: 100%;
+  overflow: hidden;
+  mask-image: linear-gradient(to left, black 0%, black 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to left, black 0%, black 90%, transparent 100%);
+}
+
+.header-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===== KEYMAN ====== */
+.keyman-column {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  user-select: none;
+}
+
+#Keyman ul li {
+  margin-left: 30px;
+}
+
+#Keyman {
+  width: 100%;
+}
+
+.keyman-column p {
+  text-align: justify;
+}
+
+.keyman-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.keyman-icons img {
+  width: 150px;
+}
+
+.keyman-column > * {
+  gap: 100px;
+}
+
+/* ===== CONTENT ===== */
+.content-section {
+  padding-top: 80px;
+}
+
+.intro {
+  margin-bottom: 60px;
+}
+
+.content-item {
+  margin-bottom: 80px;
+}
+
+.line-title {
+  position: relative;
+  padding-left: 14px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.line-title::before {
+  content: "";
+  width: 4px;
+  height: 100%;
+  background: var(--blue-signature-color);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.line-title-h2 {
+  position: relative;
+  padding-left: 14px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.line-title-h2::before {
+  content: "";
+  width: 4px;
+  height: 300px;
+  background: #00A7E1;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#khmer-text-tools {
+  margin-top: 20px;
+  margin-bottom: 150px;
+}
+
+#khmer-text-tools div:first-child {
+  margin-right: 50px;
+}
+
+#khmer-text-tools div:last-child {
+  margin-left: 50px;
+}
+
+#khmer-text-tools div p {
+  text-align: justify;
+  margin-left: 40px;
+  opacity: 50%;
+}
+
+#khmer-text-tools div p:hover {
+  opacity: 100%;
+  cursor: pointer;
+}
+
+.khmer-text-link {
+  display: flex;
+  justify-content: end;
+  color: black;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+/* ===== CHAM ===== */
+.cham-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 20px;
+}
+
+.cham-img {
+  display: flex;
+  justify-content: space-around;
+  user-select: none;
+}
+
+.cham-img img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  object-position: top;
+  text-align: center;
+}
+
+/* ===== KACHOK ====== */
+.kachok {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  height: 500px;
+  user-select: none;
+}
+
+.kachok img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.kachok span {
+  position: relative;
+  text-align: center;
+  margin-top: 20px;
+  bottom: 0;
+  font-style: italic;
+  opacity: 0.5;
+  font-size: 14px;
+}
+
+/* ===== LAYOUTS ===== */
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin: 40px 0;
+}
+
+/* ===== Tablet ===== */
+@media (min-width: 768px) and (max-width: 1280px) { 
+/* ===== HEADER ===== */
+.header {
+  height: 100%;
+}
+
+.header-grid {
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.5fr 2fr;
+}
+
+.header-text {
+  text-align: center;
+  width: 100%;
+}
+
+.header-text h1 {
+  font-size: 32px;
+}
+
+.header-image {
+  height: 50vh;
+  inset: 0;
+  mask-image: none;
+  -webkit-mask-image: none;
+}
+
+.header-image img { 
+  height: 100%;
+  object-position: center;
+}
+
+/* ===== CONTENT WIDTH ===== */
+.content-section {
+  padding-top: 50px;
+}
+
+/* ===== INTRO ===== */
+.intro {
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* ===== KEYMAN ===== */
+.keyman-column {
+  grid-template-columns: 1fr;
+}
+
+.keyman-icons {
+  justify-content: center;
+}
+
+.keyman-icons img {
+  width: 120px;
+}
+
+#Keyman ul li {
+  margin-left: 20px;
+}
+
+/* ===== KHMER TEXT TOOLS ===== */
+.two-column {
+  grid-template-columns: 1fr;
+  gap: 50px;
+  grid-template-rows: 1fr 1fr;
+}
+
+.line-title-h2::before {
+  height: 230px;
+}
+
+#khmer-text-tools div:first-child,
+#khmer-text-tools div:last-child {
+  margin: 0 30px;
+}
+
+#khmer-text-tools div p {
+  margin: 0 30px;
+}
+
+.khmer-text-link {
+  justify-content: flex-end;
+  margin-right: 30px;
+}
+
+/* ===== CHAM DICTIONARY ===== */
+.cham-column {
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.cham-img img {
+  width: 100%;
+  height: 320px;
+}
+
+/* ===== KACHOK ===== */
+.image-grid {
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.kachok {
+  height: auto;
+}
+
+.kachok img {
+  height: 320px;
+}
+
+.kachok span {
+  font-size: 13px;
+  margin-top: 12px;
+}
+
+/* ===== TYPOGRAPHY ===== */
+.line-title {
+  font-size: 22px;
+}
+
+.line-title-h2 {
+  font-size: 18px;
+}
+
+.content-item p {
+  font-size: 15px;
+  line-height: 1.7;
+}
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+.header {
+  height: fit-content;
+}
+
+.header-grid {
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.5fr 2fr;
+}
+
+.header-image {
+  height: 50vh;
+  inset: 0;
+  mask-image: none;
+  -webkit-mask-image: none;
+}
+
+.header-text {
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+}
+
+.content-section {
+  padding-top: 10px;
+}
+
+.keyman-column {
+  grid-template-columns: 1fr;
+}
+
+#Keyman ul li {
+  font-size: 12px;
+}
+
+.keyman-column > * {
+  gap: 50px;
+}
+
+.two-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.line-title-h2::before {
+  height: 150px;
+}
+
+.khmer-text-link {
+  font-size: 12px;
+}
+
+#khmer-text-tools div:first-child {
+  margin: 0px;
+}
+
+#khmer-text-tools div:last-child {
+  margin: 0px;
+}
+
+.cham-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.image-grid {
+  display: flex;
+  flex-direction: column;
+}
+
+.image-grid .kachok {
+  margin-bottom: 10px;
+}
+
+.cham-img img {
+  width: 100%;
+}
+}
+
+</style>
+
+</Layout>

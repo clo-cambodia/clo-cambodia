@@ -1,0 +1,251 @@
+---
+import Layout from "../layouts/Layout.astro"
+---
+<Layout>
+<section class="header">
+    <div class="header-grid">
+        <div class="header-text">
+        <h1>WHO WE ARE</h1>
+        </div>
+        <div class="header-image">
+            <img src=`${import.meta.env.BASE_URL}/assets/banner/aboutus_banner.jpg` alt="About Us Page Banner">
+        </div>
+    </div>
+</section>
+<section class="content-section">
+    <div class="content-item">
+        <h1 class="line-title">Mission</h1>
+        <p>Enhancing Cambodia's multilingual society through training on linguistics and developing languages.</p>
+    </div>
+    <div class="content-item">
+        <h1 class="line-title">Vision</h1>
+        <p>We want to see the people of Cambodia thrive by applying linguistic expertise to the ways they communicate in a multilingual world.</p>
+    </div>
+    <div class="content-item">
+        <h1 class="line-title"><b>Mission Statement</b></h1>
+        <p>Together with local and global partners, we provide education and conduct research in the field of linguistics which fosters appreciation for linguistic diversity, promotes cultural preservation and facilitates effective communication across Cambodia.</p>
+    </div>
+    <div class="content-item last-content-item">
+        <h1 class="line-title"><b>Core</b> Values</h1>
+        <p><b>Innovative Research:</b> Dedication to pioneering linguistic research that contributes to
+            the global understanding of languages, with a particular focus on Cambodia's
+            linguistic heritage.</p>
+
+        <p><b>Cultural Preservation:</b> A deep respect for and commitment to preservation and
+        revitalization of Cambodia's rich linguistic and cultural heritage, in recognition of its
+        importance for future generations.</p>
+
+        <p><b>Inclusivity and Diversity:</b> Fostering an environment that values and promotes
+        diversity, ensuring that all voices are heard and respected, regardless of linguistic or
+        cultural background.</p>
+            
+        <p><b>Collaboration:</b> Building strong partnerships with local and global organizations to
+        share knowledge, resources, and best practices in the field of linguistics.</p>
+
+        <p><b>Integrity and Transparency:</b> Conducting all operations with the highest ethical
+        standards, ensuring transparency and accountability in every aspect of the
+        organization's work.</p>
+
+        <p><b>Lifelong Learning:</b> Encouraging a culture of continuous learning and curiosity, both
+        within the organization and among the communities it serves.</p>
+    </div>
+    <div class="content-item">
+        <h1 class="line-title">Identity</h1>
+        <p>
+            CLO is a local and not for profit organization made up of Jesus followers and those committed to language development.
+        </p>
+    </div>
+    <div class="content-item">
+        <h1 class="line-title">Background</h1>
+        <p>
+            While Khmer is the official language of Cambodia, the 2018 national census identified 22 additional languages spoken across the country, several of which are at risk of language shift or extinction. With over fifteen years of experience in the field of linguistics, I am deeply committed to contributing to the preservation and development of these languages, recognizing the urgent need to safeguard and revitalize them.
+        </p>
+        <p>
+            The Cambodia Linguistics Organization (CLO) was founded to address several critical needs identified within Cambodia's language communities. One of the primary needs was linguistics training. By providing Cambodians with training in linguistics principles, we empower members of language communities to read, write, and conduct research in their own languages.
+        </p>
+        <p>
+            Another critical need is the development of language technology. To ensure the preservation of these languages, they must be compatible with modern technology. CLO is dedicated to ensuring that all languages in Cambodia are developed sufficiently to be used across all available computer applications.
+        </p>
+        <p>
+            Additionally, CLO identified the need for language development products, including dictionaries and literacy materials. These resources are essential for both research and educational purposes.
+        </p>
+        <p>
+            In response to these needs, CLO has outlined two primary focus areas: linguistics training and language development. Our linguistic training program includes specialized courses in topic-based linguistics, translation principles, and the use of language technology tools. In parallel, our language development initiatives encompass research, the creation of language technology tools, and the development of educational materials, such as dictionaries.
+        </p>
+        <p>
+            Through partnerships with local and international stakeholders and relevant government agencies, CLO is dedicated to equipping language communities with the resources and training necessary to achieve their language development goals. By doing so, we aim to ensure the sustainability and inclusion of Cambodia's diverse languages for generations to come.
+        </p>
+    </div>
+    <div class="content-item">
+        <h1 class="line-title">Main Programs</h1>
+        <ol type="A">
+            <li><h2>Linguistics Trainings/Workshops</h2>
+                <ol type="1">
+                    <li><p>Translation Principle Trainings/Workshops</p></li>
+                    <li><p>Topic-based Linguistics Trainings/Workshops</p></li>
+                    <li><p>Language Technology Tool Trainings</p></li>
+                </ol>
+            </li>
+        </ol>
+        <ol type="A">
+            <li><h2>Language Development</h2>
+                <ol type="1">
+                    <li><p>Language Research and Development</p></li>
+                    <li><p>Language Technology Tool Development</p></li>
+                    <li><p>Linguistics Material Production and Translation</p></li>
+                    <li><p>Literacy</p></li>
+                </ol>
+            </li>
+        </ol>
+    </div>
+</section>
+<style>
+/* header */
+.header {
+    width: 100vw;
+    height: 30vh;
+    background-color: var(--blue-signature-color);
+    user-select: none;
+}
+
+.header-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    height: 100%;
+}
+
+.header-text {
+    color: white;
+    text-align: left;
+    width: min(1400px, 80%);
+    margin-left: auto;    
+}
+
+.header-text h1 {
+    font-size: 40px;
+    line-height: 1.5em;
+    font-weight: 500;
+}
+
+.header-text p {
+    font-size: 16px;
+}
+
+.header-image {
+    height: 100%;
+    right: 0;
+    overflow: hidden;
+    mask-image: linear-gradient(to left, black 0%, black 90%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to left, black 0%, black 90%, transparent 100%);
+}
+
+.header-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+/* CONTENT */
+.content-section {
+    padding-top: 80px;
+    margin: 0 23%;
+    margin-bottom: 100px;
+}
+
+.content-item {
+    margin-bottom: 60px;
+}
+
+.content-item h1 {
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.content-item p {
+    margin-left: 15px;
+    text-align: justify;
+}
+
+.last-content-item p {
+    margin-bottom: 20px;
+}
+
+.line-title {
+    position: relative;
+    padding-left: 14px;
+    margin-bottom: 8px;
+}
+
+.line-title::before {
+    content: "";
+    width: 4px;
+    height: 100%;
+    background: var(--blue-signature-color);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* ===== Tablet ===== */
+@media (min-width: 768px) and (max-width: 1280px) { 
+.header {
+    height: 50%;
+}
+
+.header-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 2fr;
+}
+
+.header-text {
+    text-align: center;
+    width: 100%;
+}
+
+.header-text h1 {
+    font-size: 32px;
+}
+
+.header-image {
+    height: 50vh;
+    inset: 0;
+    mask-image: none;
+    -webkit-mask-image: none;
+}
+
+.header-image img { 
+    height: 100%;
+    object-position: center;
+}
+}
+/* Mobile */
+@media (max-width: 768px) { 
+.header {
+    height: fit-content;
+}
+
+.header-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 2fr;
+}
+
+.header-image {
+    height: 50vh;
+    inset: 0;
+    mask-image: none;
+    -webkit-mask-image: none;
+}
+
+.header-text {
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+}
+
+.content-section {
+    margin: 0 10%;
+}
+}
+</style>
+</Layout>

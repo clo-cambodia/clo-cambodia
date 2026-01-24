@@ -1,0 +1,206 @@
+---
+const {
+  navTheme = "light",
+  currentPath = "/"
+} = Astro.props;
+---
+<header class="navbar">
+  <div class="nav-content container-wrap">
+    <a href="/clo-cambodia/">
+      <img class="clo-logo" src=`${import.meta.env.BASE_URL}/assets/logo/clo.png` alt="CLO Logo">
+    </a>
+    <nav class="nav-links hovering-elements">
+      <a href="/clo-cambodia/about/">About Us</a>
+      <a href="/clo-cambodia/leadership/">Leadership</a>
+      <a href="/clo-cambodia/projects/">Projects</a>
+      <a class="btn-donate disabled-btn">Donate</a>
+    </nav>
+    <div class="hamburger-navbar">
+      <div class="dropdown">
+        <button type="button" class="btn btn-primary dropbtn" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="fa fa-bars"></i>
+        </button>
+        <ul class="dropdown-menu" id="myDropdown">
+          <li><a href="/clo-cambodia/about/">About Us</a></li>
+          <li><a href="/clo-cambodia/leadership/">Leadership</a></li>
+          <li><a href="/clo-cambodia/projects/">Projects</a></li>
+          <li><a class="btn-donate disabled-btn">Donate</a></li>
+        </ul>
+      </div> 
+    </div>
+  </div>
+</header>
+<style>
+@media (min-width: 1024px) { 
+  .hamburger-navbar {
+    display: none;
+  }
+}
+
+/* Navigation */
+.clo-logo {
+  width: 50%;
+}
+
+.navbar {
+  border-bottom: 1px solid #eee;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  user-select: none;
+}
+
+.nav-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+  text-transform: uppercase;
+}
+
+.nav-content a {
+  margin: 0;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+  width: 100%;
+  gap: 40px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  font-size: 16px;
+  transition: 0.2s;
+}
+
+.nav-links a.active {
+  color: var(--blue-signature-color);
+}
+
+.nav-links a:hover {
+  color: var(--blue-signature-color);
+  cursor: pointer;
+}
+
+.nav a {
+  position: relative;
+  padding: 6px 10px;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Active page link */
+.nav a.active {
+  font-weight: 600;
+  color: var(--blue-signature-color);
+}
+
+/* Optional underline indicator */
+.nav a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+}
+
+.btn-donate {
+  background: var(--blue-signature-color);
+  color: #fff !important;
+  padding: 10px 22px;
+  transition: 0.25s;
+}
+
+.btn-donate:hover {
+  border: var(--blue-signature-color) 1px solid;
+  color: var(--blue-signature-color) !important;
+  background-color: white;
+  cursor: pointer;
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1280px) {  
+  .clo-logo {
+    width: 30%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .clo-logo {
+    width: 70%;
+  }
+  .nav-links {
+    display: none; /* Simple mobile version */
+  }
+}
+
+@media (max-width: 1280px) {
+  .hamburger-navbar {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger-navbar .dropdown-menu {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 12px 0;
+    min-width: 220px;
+    border: none;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    margin-top: 10px;
+    right: 0;
+    left: -200px !important;
+  }
+
+  .hamburger-navbar .dropdown-menu a {
+    display: block;
+    padding: 12px 22px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  .hamburger-navbar .dropdown-menu a:hover {
+    background-color: #f5f5f5;
+    color: var(--blue-signature-color);
+  }
+
+  .hamburger-navbar .dropdown-menu a.active {
+    color: var(--blue-signature-color);
+    font-weight: 600;
+  }
+
+  .hamburger-navbar .btn-donate {
+    margin: 10px 16px;
+    padding: 12px 18px;
+    background-color: var(--blue-signature-color);
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 8px;
+    display: block;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+  }
+
+  .hamburger-navbar .btn-donate:hover {
+    background-color: #0b4ea2;
+    transform: translateY(-1px);
+  }
+}
+</style>
