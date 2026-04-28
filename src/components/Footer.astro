@@ -26,7 +26,7 @@
 		  </a>
         </div>
         <div class="org-info">
-            <p class="org-info-title">Cambodia Linguistics Organization</p>
+            <h5 class="org-info-title">Cambodia Linguistics Organization</h5>
             <p>#39, St. Betong (6), Trapeang Svay, Kouk Khleang, Sen Sok, Phnom Penh, Kingdom of Cambodia</p>
             <p>Tel: (855) 96 925 910</p>
             <p>Email: camlingorg@gmail.com</p>
@@ -45,7 +45,8 @@
             <a href="https://www.youtube.com/@clo-cambodia" target="_blank"><span class="icon fa fa-youtube-play"></span></a>
           </div>
           <div class="footer-copy">
-            <p>@ 2026 Cambodia Linguistics Organization</p>
+            <p>@ 2026 All rights reserved</p>
+			<p>Cambodia Linguistics Organization</p>
           </div>
         </div>
         </div>
@@ -71,7 +72,7 @@
 	flex-direction: row;
 	justify-content: space-between;
 	align-content: start;
-	height: 250px;
+	height: 300px;
 	gap: 10px;
 	z-index: 1;
 }
@@ -80,22 +81,20 @@
 .footer-overlay .right-footer {
 	width: 100%;
 	overflow: hidden;
-	padding: 10px;
+	padding-top: 60px;
 }
 
 .right-footer h2 {
-	font-size: 24px;
+	font-size: 26px !important;
 	font-weight: 500;
 	letter-spacing: 3px;
+	margin-bottom: 20px;
 }
 
 .right-footer p {
 	font-weight: 200;
 	text-align: justify;
-}
-
-.right-footer h2 {
-	margin-bottom: 12px;
+	font-size: 18px !important;
 }
 
 .btn-support {
@@ -120,7 +119,7 @@
 
 .left-footer img {
 	position: relative;
-	bottom: 90px;
+	bottom: 55px;
 }
 
 /* Last Footer */
@@ -130,18 +129,18 @@
 
 .footer-info .org-icon {
 	user-select: none;
-	width: 100%;
 }
 
 .footer-info-container {
 	display: grid;
 	grid-template-columns: 1fr 1.5fr 1fr 1fr;
 	justify-content: space-between;
+	align-items: center;
 	font-size: 12px;
 }
 
 .footer-info-container > * {
-	margin: 30px;
+	margin: 30px 0;
 }
 
 .org-icon img {
@@ -150,13 +149,15 @@
 
 .org-info-title {
 	user-select: none;
-	font-size: 16px;
+	font-size: 18px !important;
 	margin-bottom: 20px !important;
 	font-weight: 500;
 }
 
 .org-info p {
-	margin: 0;
+	line-height: 1.1em;
+	font-size: 14px !important;
+	width: 70%;
 }
 
 /* Footer Links */
@@ -172,9 +173,10 @@
 }
 
 .footer-links a {
-	text-decoration: none;
+	text-decoration: underline;
 	color: white;
 	align-self: start;
+	font-size: 16px !important;
 }
 
 .footer-links .donate-footer-link {
@@ -192,6 +194,10 @@
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	gap: 12px;
+}
+
+.footer-socials a {
+	text-decoration: none;
 }
 
 .footer-socials .icon {

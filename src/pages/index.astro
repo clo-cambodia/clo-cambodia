@@ -26,7 +26,7 @@ import Layout from '../layouts/Layout.astro';
 		<span>៤</span>
 		<span>៥</span>
 	</div>
-    <div class="header-grid">
+    <div class="header-grid container-wrap">
       <div class="header-text">
         <h1>Linguistic Research</h1>
 		<h1>in Cambodia</h1>
@@ -36,36 +36,36 @@ import Layout from '../layouts/Layout.astro';
 			<a href="/clo-cambodia/projects/">Our projects</a>
 		</div>
 	  </div>
-	<div class="khmer-pattern khmer-pattern-right">
-		<span>ក</span>
-		<span>ខ</span>
-		<span>គ</span>
-		<span>ឃ</span>
-		<span>ង</span>
-		<span>ច</span>
-		<span>ឆ</span>
-		<span>ជ</span>
-		<span>ឈ</span>
-		<span>ញ</span>
-		<span>ដ</span>
-		<span>ថ</span>
-		<span>ឌ</span>
-		<span>ឍ</span>
-		<span>ណ</span>
-		<span>១</span>
-		<span>២</span>
-		<span>៣</span>
-		<span>៤</span>
-		<span>៥</span>
-	</div>
-	<div class="header-image">
-		<img src="assets/banner/home_banner.jpg" alt="Home Page Banner">
-	</div>
-	<div class="action-links-bottom">
-		<a href="/clo-cambodia/about/">Learn more</a>
-		<a href="/clo-cambodai/projects/">Our projects</a>
-	</div>
     </div>
+	<div class="header-image">
+			<img src="assets/banner/home_banner.jpg" alt="Home Page Banner">
+		</div>
+		<div class="khmer-pattern khmer-pattern-right">
+			<span>ក</span>
+			<span>ខ</span>
+			<span>គ</span>
+			<span>ឃ</span>
+			<span>ង</span>
+			<span>ច</span>
+			<span>ឆ</span>
+			<span>ជ</span>
+			<span>ឈ</span>
+			<span>ញ</span>
+			<span>ដ</span>
+			<span>ថ</span>
+			<span>ឌ</span>
+			<span>ឍ</span>
+			<span>ណ</span>
+			<span>១</span>
+			<span>២</span>
+			<span>៣</span>
+			<span>៤</span>
+			<span>៥</span>
+		</div>
+		<div class="action-links-bottom">
+			<a href="/clo-cambodia/about/">Learn more</a>
+			<a href="/clo-cambodai/projects/">Our projects</a>
+		</div>
   </section>
   <section class="what-we-do container-wrap">
 	<div class="title-and-media">
@@ -76,8 +76,7 @@ import Layout from '../layouts/Layout.astro';
 		<p>
 			<b>The Cambodia Linguistics Organization (CLO)</b> 
 			was founded to address several critical needs identified within Cambodia's language communities. One of the primary needs was linguistics training. 
-		</p>
-		<p>
+		
 			By providing Cambodians with training in linguistics principles, 
 			<i class="intro-text-second-para">we empower members of language communities to read, write, and conduct research in their own languages.</i>
 		</p>
@@ -143,19 +142,21 @@ import Layout from '../layouts/Layout.astro';
 <style>
 /* Header */
 .header {
-	width: 100vw;
 	background-color: var(--blue-signature-color);
 	user-select: none;
 	margin-top: 1px;
 	position: relative;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	min-height: 300px;
+	max-height: 600px;
 }
 
 .header-grid {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-  	align-items: stretch;
-	justify-content: space-between;
+	display: flex;
+  	align-items: center;
 	height: 100%;
+	width: 56%;
 	gap: 100px;
 }
 
@@ -166,17 +167,15 @@ import Layout from '../layouts/Layout.astro';
 	color: white;
 	text-align: justify;
 	line-height: 2em;
-	padding: 20px 0;
-	width: min(1400px, 75%);
-  	margin-left: auto;
 }
 
 .header-text h1 {
 	text-transform: uppercase;
+	font-size: 32px !important;
 }
 
 .header-text p {
-	font-size: 18px;
+	font-size: 18px !important;
 	color: #f5f2f2;
 	margin: 20px 0;
 }
@@ -190,7 +189,7 @@ import Layout from '../layouts/Layout.astro';
 	width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
+    object-position: top;
 	transform: rotateY(180deg);
 	mask-image: linear-gradient(to right, black 0%, black 90%, transparent 100%);
 	-webkit-mask-image: linear-gradient(to right, black 0%, black 90%, transparent 100%);
@@ -217,6 +216,7 @@ import Layout from '../layouts/Layout.astro';
 .action-links-bottom {
 	display: none;
 }
+
 /* Khmer Pattern on the right side of header */
 .khmer-pattern-right, 
 .khmer-pattern-bottom-left, 
@@ -379,8 +379,12 @@ import Layout from '../layouts/Layout.astro';
 	margin: 30px 0;
 }
 
+.title-and-media h1 {
+	font-size: 32px !important;
+}
+
 .title-and-media h2 {
-	font-size: 26px;
+	font-size: 30px;
 	font-weight: 700;
 	letter-spacing: 1px;
 }
@@ -389,12 +393,14 @@ import Layout from '../layouts/Layout.astro';
 .intro-text {
 	margin: auto;
 	text-align: center;
+	padding: 20px 0;
 }
 
 .intro-text p {
 	margin-bottom: 16px;
 	text-align: justify;
-	font-size: 20px;
+	font-size: 20px !important;
+	line-height: 2em;
 }
 
 .intro-text-second-para {
@@ -404,11 +410,12 @@ import Layout from '../layouts/Layout.astro';
 /* Media */
 .media {
 	margin-bottom: 50px;
+	text-align: center;
 }
 
 .media iframe {
-	width: 100%;
-	height: 75vh;
+	width: 70%;
+	height: 55vh;
 }
 
 /* view-our-work */
@@ -420,7 +427,8 @@ import Layout from '../layouts/Layout.astro';
 	background: var(--blue-signature-color);
 	color: white;
 	padding: 15px 35px;
-	font-size: 20px;
+	font-size: 16px !important;
+	margin-bottom: 20px;
 	text-decoration: none;
 	font-weight: 500;
 }
@@ -444,6 +452,7 @@ import Layout from '../layouts/Layout.astro';
   align-items: flex-end;
   justify-content: center;
   height: 500px;
+  margin-top: 100px;
 }
 
 .quote::before {
@@ -452,7 +461,7 @@ import Layout from '../layouts/Layout.astro';
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 50%;               
+  height: 65%;               
   background-color: var(--blue-signature-color);
   z-index: 0;
 }
@@ -474,21 +483,21 @@ import Layout from '../layouts/Layout.astro';
   color: white;
   line-height: 2em;
   text-align: justify;
-  font-size: 16px;
 }
 
 .text-block p {
-	width: 80%;
+  width: 80%;
+  font-size: 20px !important;
 }
 
 .text-block span {
-	margin-top: 20px;
+	margin-top: 50px;
 }
 
 .text-block .author {
 	width: 100%;
 	text-align: right;
-	font-size: 14px;
+	font-size: 16px !important;
 	opacity: 0.9;
 }
 
@@ -507,11 +516,12 @@ import Layout from '../layouts/Layout.astro';
 	text-align: center;
 	background: #f7f7f7;
 	user-select: none;
-	padding-top: 50px;
+	padding: 50px 0;
 }
 
 .collaborators h1 {
 	margin-bottom: 6px;
+	font-size: 32px !important;
 }
 
 .logo-row {
@@ -526,8 +536,8 @@ import Layout from '../layouts/Layout.astro';
 }
 
 .logo img {
-	width: 120px;
-	height: 120px;
+	width: 150px;
+	height: 150px;
 	color: #555;
 	margin: 0;
 	padding: 0;
@@ -539,13 +549,16 @@ import Layout from '../layouts/Layout.astro';
 }
 
 #wycliffe img {
-	width: 250px;
+	width: 300px;
+	height: 150px;
 }
 
 /* Tablet */
 @media (min-width: 768px) and (max-width: 1280px) {  
 .header {
-padding-top: 20px;
+	padding-top: 20px;
+	display: flex;
+	flex-direction: column;
 }
 
 .header-grid {
@@ -639,6 +652,11 @@ font-size: 10px;
 /* Mobile */
 @media (max-width: 768px) {
 /* Header */
+.header {
+	display: flex;
+	flex-direction: column;
+}
+
 .header-grid {
 	display: flex;
 	flex-direction: column;
@@ -667,7 +685,7 @@ font-size: 10px;
 	position: relative;
 	text-align: center;
 	width: 100vw;
-	height: max-content;
+	max-height: 500px;
 }
 
 .header-image img {

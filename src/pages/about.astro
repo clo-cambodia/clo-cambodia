@@ -3,13 +3,13 @@ import Layout from "../layouts/Layout.astro"
 ---
 <Layout>
 <section class="header">
-    <div class="header-grid">
+    <div class="header-grid container-wrap">
         <div class="header-text">
         <h1>WHO WE ARE</h1>
         </div>
-        <div class="header-image">
-            <img src=`${import.meta.env.BASE_URL}/assets/banner/aboutus_banner.jpg` alt="About Us Page Banner">
-        </div>
+    </div>
+    <div class="header-image">
+        <img src=`${import.meta.env.BASE_URL}/assets/banner/aboutus_banner.jpg` alt="About Us Page Banner">
     </div>
 </section>
 <section class="content-section">
@@ -106,24 +106,25 @@ import Layout from "../layouts/Layout.astro"
     height: 30vh;
     background-color: var(--blue-signature-color);
     user-select: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
 }
 
 .header-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     align-items: center;
+    width: 56%;
     height: 100%;
 }
 
 .header-text {
     color: white;
-    text-align: left;
-    width: min(1400px, 80%);
-    margin-left: auto;    
+    text-align: left;  
 }
 
 .header-text h1 {
-    font-size: 40px;
+    font-size: 40px !important;
     line-height: 1.5em;
     font-weight: 500;
 }

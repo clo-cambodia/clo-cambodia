@@ -4,17 +4,17 @@ import style from "../assets/style.css";
 ---
 <Layout>
 <section class="header">
-  <div class="header-grid">
+  <div class="header-grid container-wrap">
     <div class="header-text">
       <h1>CURRENT PROJECTS</h1>
     </div>
-    <div class="header-image">
+  </div>
+  <div class="header-image">
       <img
         src=`${import.meta.env.BASE_URL}/assets/banner/project_banner.jpg`
         alt="Current Projects Banner"
       />
     </div>
-  </div>
 </section>
 <!-- ===== CONTENT ===== -->
 <section class="content-section container-wrap">
@@ -111,24 +111,24 @@ This work extends to quality assurance for the KeymanWeb.com redevelopment, Keym
   height: 30vh;
   background-color: var(--blue-signature-color);
   user-select: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .header-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   height: 100%;
+  width: 56%;
   align-items: center;
 }
 
 .header-text {
   color: white;
   text-align: left;
-  width: min(1400px, 80%);
-  margin-left: auto;
 }
 
 .header-text h1 {
-  font-size: 40px;
+  font-size: 40px !important;
   font-weight: 500;
   text-transform: uppercase;
 }

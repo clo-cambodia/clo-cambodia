@@ -15,18 +15,18 @@ import membOrd3 from "/public/assets/team/member_ord_3.png";
 ---
 <Layout>
 <section class="header">
-  <div class="header-grid">
+  <div class="header-grid container-wrap">
     <div class="header-text">
         <h1>LEADERSHIP</h1>
     </div>
-    <div class="header-image">
+  </div>
+  <div class="header-image">
       <Image 
           src={leadershipBanner}
           alt="Leadership Banner"
           loading="lazy"
         />
     </div>
-  </div>
 </section>
 <section class="content-section container-wrap">
   <!-- Board of Directors -->
@@ -85,7 +85,7 @@ import membOrd3 from "/public/assets/team/member_ord_3.png";
     </div>
   </div>
   <!-- Executive Team -->
-  <div class="content-item">
+  <div class="content-item executive">
     <h1 class="line-title">Executive Team</h1>
     <div class="team-grid four">
       <div class="member">
@@ -128,49 +128,6 @@ import membOrd3 from "/public/assets/team/member_ord_3.png";
       </div>
     </div>
   </div>
-
-  <!-- Staff -->
-  <div class="content-item last-content-item">
-    <h1 class="line-title">Staff</h1>
-    <div class="team-grid four">
-      <div class="member">
-        <Image 
-          src={membOrd1}
-          alt="Member Order 1"
-          loading="lazy"
-          width={250}
-        />
-        <div class="member-name">
-          <h3>MengHeng Hav</h3>
-          <p>Technical Support Engineer</p>
-        </div>
-      </div>
-      <div class="member">
-      <Image 
-          src={membOrd2}
-          alt="Member Order 2"
-          loading="lazy"
-          width={250}
-        />
-        <div class="member-name">
-          <h3>Noelle</h3>
-          <p>Translator</p>
-        </div>
-      </div>
-      <div class="member">
-        <Image 
-          src={membOrd3}
-          alt="Member Order 3"
-          loading="lazy"
-          width={250}
-        />
-        <div class="member-name">
-          <h3>Hanyou Pham</h3>
-          <p>Community Facilitator</p>
-        </div>
-      </div>
-    </div>
-  </div>
 </section>
 <style>
 /* ===== HEADER ===== */
@@ -179,24 +136,25 @@ import membOrd3 from "/public/assets/team/member_ord_3.png";
   height: 30vh;
   background-color: var(--blue-signature-color);
   user-select: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
 }
 
 .header-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  width: 56%;
   height: 100%;
   align-items: center;
 }
 
 .header-text {
-  width: min(1400px, 80%);
-  margin-left: auto;
   color: white;
   text-align: left;
 }
 
 .header-text h1 {
-  font-size: 40px;
+  font-size: 40px !important;
   font-weight: 500;
 }
 
@@ -247,6 +205,10 @@ import membOrd3 from "/public/assets/team/member_ord_3.png";
   grid-template-columns: repeat(4, 1fr);
 }
 
+.executive {
+  margin-bottom: 80px;
+}
+
 .member img {
   object-fit: cover;
   object-position: center;
@@ -263,10 +225,6 @@ import membOrd3 from "/public/assets/team/member_ord_3.png";
 .member p {
   font-size: 16px;
   color: #555;
-}
-
-.last-content-item {
-    margin-bottom: 80px;
 }
 
 /* Tablet */
@@ -286,7 +244,7 @@ import membOrd3 from "/public/assets/team/member_ord_3.png";
   }
 
   .header-text h1 {
-    font-size: 32px;
+    font-size: 40px !important;
   }
 
   .header-image {
