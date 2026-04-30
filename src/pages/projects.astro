@@ -107,7 +107,6 @@ This work extends to quality assurance for the KeymanWeb.com redevelopment, Keym
 </section>
 <style>
 .header {
-  width: 100vw;
   height: 30vh;
   background-color: var(--blue-signature-color);
   user-select: none;
@@ -463,6 +462,7 @@ This work extends to quality assurance for the KeymanWeb.com redevelopment, Keym
 .header-grid {
   grid-template-columns: 1fr;
   grid-template-rows: 0.5fr 2fr;
+  width: auto;
 }
 
 .header-image {
@@ -486,6 +486,15 @@ This work extends to quality assurance for the KeymanWeb.com redevelopment, Keym
   padding-top: 10px;
 }
 
+.keyman-icons {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.keyman-icons img {
+  justify-self: center;
+}
+
 .keyman-column {
   grid-template-columns: 1fr;
 }
@@ -501,10 +510,6 @@ This work extends to quality assurance for the KeymanWeb.com redevelopment, Keym
 .two-column {
   display: flex;
   flex-direction: column;
-}
-
-.line-title-h2::before {
-  height: 150px;
 }
 
 .khmer-text-link {

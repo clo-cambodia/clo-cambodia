@@ -560,8 +560,8 @@ import Layout from '../layouts/Layout.astro';
 }
 
 .khmer-pattern-bottom-left {
-display: block;
-bottom: 30%;
+	display: block;
+	bottom: 30%;
 }
 
 /* CONTENT */
@@ -641,7 +641,7 @@ bottom: 30%;
 }
 /* What we do */
 .intro-text p {
-	font-size: 12px;
+	font-size: 16px !important;
 }
 
 .media iframe {
@@ -702,10 +702,9 @@ bottom: 30%;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: repeat(3, 1fr);
-	gap: 40px;
-	justify-content: space-around;
-	gap: 40px;
+	justify-content: space-between;
 	padding: 50px 0;
+	gap: 20px !important;
 }
 
 .logo img {
@@ -770,10 +769,36 @@ bottom: 30%;
 
 }
 
-@media (max-width: 418px) { 
-.statement-image img {
-	height: 100%;
+@media (max-width: 970px) and (min-width: 768px) {
+	.quote {
+		margin-top: 50px;
+	}
+
+	.quote::before {
+		height: 100%;
+	}
+
+	.quote-child {
+		font-size: 14px; 
+	}
 }
+
+@media (max-width: 1440px) and (min-width: 1280px) {
+	.header-grid {
+		width: 80%;
+		margin-left: 20%;
+	}
+}
+
+@media (max-width: 418px) { 
+	.statement-image img {
+		height: 100%;
+	}
+
+	.collaborators .logo-row  {
+		display: flex;
+		flex-direction: column;
+	}
 }
   </style>
 </Layout>
