@@ -1,5 +1,7 @@
 ---
-import Layout from "../layouts/Layout.astro"
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import aboutusBanner from "/public/assets/banner/aboutus_banner.jpg";
 ---
 <Layout>
 <section class="header">
@@ -9,7 +11,11 @@ import Layout from "../layouts/Layout.astro"
         </div>
     </div>
     <div class="header-image">
-        <img src=`/public/assets/banner/aboutus_banner.jpg` alt="About Us Page Banner">
+        <Image 
+          src={aboutusBanner}
+          alt="About Banner"
+          loading="lazy"
+        />
     </div>
 </section>
 <section class="content-section">
