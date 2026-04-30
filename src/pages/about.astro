@@ -223,7 +223,8 @@ import Layout from "../layouts/Layout.astro"
 /* Mobile */
 @media (max-width: 768px) { 
 .header {
-    height: fit-content;
+    display: flex;
+    flex-direction: column;
 }
 
 .header-grid {
@@ -236,6 +237,10 @@ import Layout from "../layouts/Layout.astro"
     inset: 0;
     mask-image: none;
     -webkit-mask-image: none;
+}
+
+.header-image img {
+    object-fit: cover;
 }
 
 .header-text {

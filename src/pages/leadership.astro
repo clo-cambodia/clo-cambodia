@@ -263,12 +263,18 @@ import membOrd3 from "/public/assets/team/member_ord_3.png";
   .team-grid.four {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .member img {
+    width: 50% !important;
+    height: 80%;
+  }
 }
 
 /* Mobile */
 @media (max-width: 768px) {
 .header {
-  height: fit-content;
+  display: flex;
+  flex-direction: column;
 }
 
 .header-grid {
@@ -281,6 +287,10 @@ import membOrd3 from "/public/assets/team/member_ord_3.png";
   inset: 0;
   mask-image: none;
   -webkit-mask-image: none;
+}
+
+.header-image img {
+  object-fit: cover;
 }
 
 .header-text {
