@@ -546,12 +546,17 @@ import Layout from '../layouts/Layout.astro';
 }
 
 /* Tablet */
-@media (min-width: 768px) and (max-width: 1280px) {  
+@media (min-width: 768px) and (max-width: 1280px) { 
+	
+.header-text {
+	padding: 0 100px;
+}
+
 /* Khmer Patterns */
 .khmer-pattern-right {
-display: block;
-float: right;
-left: 92%;
+	display: block;
+	float: right;
+	left: 92%;
 }
 
 .khmer-pattern-bottom-left {
@@ -618,6 +623,10 @@ bottom: 30%;
 
 /* Mobile */
 @media (max-width: 768px) {
+	.header-text {
+		padding: 0 10px;
+	}
+
 .action-links {
 	margin-bottom: 20px;
 }
@@ -734,10 +743,6 @@ bottom: 30%;
 	.khmer-pattern {
 		height: 45%;
 		z-index: 0;
-	}
-
-	.header-text {
-		padding: 0 100px;
 	}
 
 	.header-text > * {
